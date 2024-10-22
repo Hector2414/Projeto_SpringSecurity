@@ -1,0 +1,30 @@
+package com.sesi.login.service;
+
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+import com.sesi.login.model.Usuario;
+import com.sesi.login.repository.UsuarioRepository;
+
+public class DetalhesUsuarioService implements UserDetailsService{
+
+	private UsuarioRepository usuarioRepository;
+	
+	//@Override
+	public UserDetails loadUserByUsername(String nomeUsuario) throws UsernameNotFoundException {
+		Usuario usuario = usuarioRepository.findyNomeUsuario(nomeUsuario);
+		
+		if(usuario == null ) {
+			throw new UsernameNotFoundException("Usuario não encontrado");
+		}//
+		//return User(usuario.getNomeUsuario(),
+		//	usuario.getSenha(),
+		//		usuario.toString()
+		//		);
+		
+
+	}
+
+}
