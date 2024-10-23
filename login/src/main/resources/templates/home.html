@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="/css/home.css" type="text/css" rel="stylesheet">
+    
+  </head>
+  <body>
+    
+    <nav id="menu">
+                  <ul>
+                      <li>a<a th:href="@{/home}">Home</a></li>
+                      <li><a th:href="@{/Perfil}">Perfil</a></li>
+                      <li><a th:href="@{/Configuracoes}">Configurações</a></li>
+     <!--               <li><a th:href="#" onclick="document.getElementById('logoutForm').submit">Logout</a></li> -->   
+                  
+                  
+                  </ul>
+    
+    </nav>
+    
+    <div id="container ">
+    
+    <h2>Home</h2>
+    <!--
+    <form id="LogoutForm" th:action="@{/logout}" method="post" style="display:none">
+         
+    
+    </form>
+    
+      -->
+    <!--  
+    <p>Ainda não tem conta? <a th:href="@{/registrar}"> Registre-se aqui</a> </p>-->
+    </div>
+    
+  </body>
+</html>

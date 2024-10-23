@@ -13,7 +13,7 @@
     
     <h2>Registrar</h2>
     
-    <form th:action="@{/registrar}" th:object="@{usuario}">
+    <form th:action="@{/registrar}" th:object="${usuario}" method="post">
            <div>
                 <label>Nome do Usuario</label>
                 <input type="text" name="username" th:field="*{nomeUsuario}">

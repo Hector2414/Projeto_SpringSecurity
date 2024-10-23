@@ -44,9 +44,9 @@ public class ConfiguracaoSeguranca {
 		
 		http.authorizeHttpRequests((authorize) -> 
 		        authorize
-		            .requestMatchers("/login","/registrar").permitAll()
+		            .requestMatchers("/login","/registrar", "/h2-console/**").permitAll()
 		            .requestMatchers("css/**").permitAll()
-		            .requestMatchers("/h2-console/**").permitAll()
+		  
 				    .anyRequest().authenticated()
 				)
 				.formLogin((form) ->
@@ -66,7 +66,8 @@ public class ConfiguracaoSeguranca {
 				
 		
 		
-		
+		http.csrf().disable();
+		http.headers().frameOptions().disable();
 		
 		return http.build();
 		
