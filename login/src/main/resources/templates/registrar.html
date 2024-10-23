@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Registrar</title>
     <link href="/css/estilo.css" type="text/css" rel="stylesheet">
     
   </head>
@@ -11,24 +11,24 @@
     
     <div id="container ">
     
-    <h2>Login</h2>
+    <h2>Registrar</h2>
     
-    <form >
+    <form th:action="@{/registrar}" th:object="@{usuario}">
            <div>
                 <label>Nome do Usuario</label>
-                <input type="text" name="username">
+                <input type="text" name="username" th:field="*{nomeUsuario}">
                 
                 <label>Senha</label>
-                <input type="password" name="password">
+                <input type="password" name="password" th:field="*{senha}">
                 
                 
            </div>
     
-           <button type="submit">Login</button>
+           <button type="submit">Registrar</button>
     
     </form>
     
-    <p>Ainda não tem conta? <a th:href="@{/registrar}"> Registre-se aqui</a> </p>
+    <p>Já tem uma conta ? <a th:href="@{/login}"> Faça login aqui</a> </p>
     </div>
     
   </body>

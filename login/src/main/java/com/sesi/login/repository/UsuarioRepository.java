@@ -6,5 +6,5 @@ import com.sesi.login.model.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
 
-	Usuario findyNomeUsuario(String nomeUsuario);
+	Usuario findByNomeUsuario(String nomeUsuario);
 }
